@@ -10,7 +10,15 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+use App\nota;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('notas', function(){
+
+	$notas= Nota::all();
+	//dd($notas);
+	return view('notas', compact('notas'));
 });
