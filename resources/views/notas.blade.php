@@ -7,7 +7,7 @@
 	<h1>Notas</h1>
 	<ul>
 		@foreach($notas as $nota)
-		<li> {{ $note->note }} </li>
+		<li> {{ $nota->nota }} </li>
 		@endforeach
 	</ul>
 </body>
