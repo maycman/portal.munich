@@ -11,14 +11,19 @@
 |
 */
 use App\nota;
+use App\portal;
 
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::get('notas', function(){
 
 	$notas= Nota::all();
 	//dd($notas);
 	return view('notas', compact('notas'));
+});
+
+
+Route::get('encuesta', function(){
+	return view('callcenter/encuesta');
 });
