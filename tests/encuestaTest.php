@@ -12,12 +12,26 @@ class encuestaTest extends TestCase
      *
      * @return void
      */
-    public function testEncuesta()
+    public function testInicio()
     {
         //Having
         //When
-        $this->visit("encuesta")
+        $this->visit("/")
         	//Then
-        	->see("Encabezado");
+        	->see("Contenido");
+    }
+    public function testEncuesta()
+    {
+    	//When
+    	$this->visit("encuesta")
+    		//Then
+    		->see("Encuesta");
+    }
+    public function testNotas()
+    {
+    	//When
+    	$this->visit("notas")
+    		//Then
+    		->see("Notas");
     }
 }

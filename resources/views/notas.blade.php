@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Notas Bebe</title>
-</head>
-<body>
+@extends("layout")
+@section("content")
 	<h1>Notas</h1>
 	<ul>
 		@foreach($notas as $nota)
 		<li> {{ $nota->nota }} </li>
 		@endforeach
 	</ul>
-</body>
-</html>
+@endsection

@@ -2,6 +2,6 @@
 
 @section("content")
 	<div class="container-fluid">
-		<h2>Contenido 1</h2>
+		<h2>Encuesta</h2>
 	</div>
 @endsection
