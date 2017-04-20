@@ -18,14 +18,14 @@ class encuestaTest extends TestCase
         //When
         $this->visit("/")
         	//Then
-        	->see("Contenido");
+        	->see("Inicio");
     }
     public function testEncuesta()
     {
     	//When
     	$this->visit("encuesta")
     		//Then
-    		->see("Encuesta");
+    		->see("Gestión de encuestas");
     }
     public function testNotas()
     {
@@ -33,5 +33,19 @@ class encuestaTest extends TestCase
     	$this->visit("notas")
     		//Then
     		->see("Notas");
+    }
+    public function testEncuestaServicio()
+    {
+    	//When
+    	$this->visit("encuesta/servicio")
+    		//Then
+    		->see("Encuestas de servicio");
+    }
+    public function testEncuestaVentas()
+    {
+    	//When
+    	$this->visit("encuesta/ventas")
+    		//Then
+    		->see("Encuestas de ventas");
     }
 }

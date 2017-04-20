@@ -19,6 +19,12 @@ Route::get('/', function () {
 Route::get('encuesta', function(){
 	return view('callcenter/encuesta');
 });
+Route::get('encuesta/servicio', function(){
+	return view('callcenter/servicio');
+});
+Route::get('encuesta/ventas', function(){
+	return view('callcenter/ventas');
+});
 Route::get('notas', function(){
 
 	$notas= Nota::all();
