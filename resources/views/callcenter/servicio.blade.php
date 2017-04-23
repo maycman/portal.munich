@@ -33,16 +33,6 @@
 								<td>Maribel Vilchis</td>
 								<td><button class="btn btn-primary">Iniciar Encuesta</button></td>
 							</tr>
-							<tr>
-								<th>2</th>
-								<td>Carlos Hernandez Garmendía</td>
-								<td>Jetta</td>
-								<td>TrendLine</td>
-								<td>2018</td>
-								<td>67823</td>
-								<td>Alejandro Aguilar</td>
-								<td><button class="btn btn-primary">Iniciar Encuesta</button></td>
-							</tr>
 						</tbody>
 					</table>
 				</div>
