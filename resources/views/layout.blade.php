@@ -32,7 +32,7 @@
         				<li id="home"><a href="/">Inicio</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Call Center <b class="caret"></b></a>
-	        				<ul class="dropdown-menu">
+	        				<ul id="mdrop" class="dropdown-menu">
 	          					<li id="encuesta"><a href="/encuesta">Encuestas</a></li>
 	          					<li id="notas"><a href="/notas">Reportes</a></li>
 	          					<li id="Modificar"><a href="#">Modificar Encuesta</a></li>

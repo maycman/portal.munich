@@ -4,10 +4,12 @@ $(document).ready(function(){
 	if (pag=="encuesta")
 	{
 		$('#'+pag).addClass("active");
+		$('#mdrop').addClass("active");
 	}
 	else if(pag=='notas')
 	{
 		$('#'+pag).addClass("active");
+		$('#mdrop').addClass("active");
 	}
 	else
 	{
