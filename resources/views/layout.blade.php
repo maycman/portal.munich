@@ -29,13 +29,13 @@
     			</div>
     			<div class="col-sm-10"> 
     				<ul class="nav navbar-nav">   			
-        				<li class="active"><a href="/">Inicio</a></li>
+        				<li id="home"><a href="/">Inicio</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Call Center <b class="caret"></b></a>
 	        				<ul class="dropdown-menu">
-	          					<li><a href="/encuesta">Encuestas</a></li>
-	          					<li><a href="/notas">Reportes</a></li>
-	          					<li><a href="#">Modificar Encuesta</a></li>
+	          					<li id="encuesta"><a href="/encuesta">Encuestas</a></li>
+	          					<li id="notas"><a href="/notas">Reportes</a></li>
+	          					<li id="Modificar"><a href="#">Modificar Encuesta</a></li>
 	          					<li><a href="#">Otros</a></li>
 	        				</ul>
 	      				</li>
