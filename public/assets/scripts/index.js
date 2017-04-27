@@ -11,7 +11,7 @@ $(document).ready(function(){
 		$('#'+pag).addClass("active");
 		$('#mdrop').addClass("active");
 	}
-	else if(pag==null)
+	else if(pag=="")
 	{
 		$('#home').addClass("active");
 	}
