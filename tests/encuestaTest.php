@@ -27,13 +27,13 @@ class encuestaTest extends TestCase
     		//Then
     		->see("Gestión de encuestas");
     }
-    public function testNotas()
+    /*public function testNotas()
     {
     	//When
     	$this->visit("notas")
     		//Then
     		->see("Notas");
-    }
+    }*/
     public function testEncuestaServicio()
     {
     	//When

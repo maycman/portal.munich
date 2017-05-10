@@ -11,23 +11,11 @@
 |
 */
 use App\nota;
-use App\portal;
+use App\registro;
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('encuesta', function(){
-	return view('callcenter/encuesta');
-});
-Route::get('encuesta/servicio', function(){
-	return view('callcenter/servicio');
-});
-Route::get('encuesta/ventas', function(){
-	return view('callcenter/ventas');
-});
-Route::get('notas', function(){
-
-	$notas= Nota::all();
-	//dd($notas);
-	return view('notas', compact('notas'));
-});
+Route::get('/', 'portalController@index');
+Route::get('encuesta', 'portalController@encuestas');
+Route::get('encuesta/servicio', 'portalController@encuestaServicio');
+Route::get('encuesta/servicio/sencuesta', 'portalController@cadaEncuestaServicio');
+Route::get('encuesta/ventas', 'portalController@ventas');
+Route::get('notas', 'portalController@listaEncuestaServicio');
