@@ -24,9 +24,9 @@ class portalController extends Controller
 		$registro = registro::all();
 		return view('callcenter/servicio', compact('registro'));
 	}
-	public function cadaEncuestaServicio()
+	public function cadaEncuestaServicio($id)
 	{
-		return view("callcenter/sencuesta");
+		return view("callcenter/llenado", compact('id'));
 	}
 	public function ventas()
 	{
