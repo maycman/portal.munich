@@ -57,4 +57,10 @@ class registro extends Model
     	'contactable',
     	'cache'];
     protected $guarded = ['id_registro'];
+
+    public function scopeId($query, $id)
+    {
+        #dd('scope: '. $id);
+        $query->where('id_registro',$id)->paginate(10);
+    }
 }

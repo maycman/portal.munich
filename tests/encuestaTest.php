@@ -3,7 +3,7 @@
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use App\portal;
+use App\registro;
 
 class encuestaTest extends TestCase
 {
@@ -50,7 +50,7 @@ class encuestaTest extends TestCase
     }
     public function testCadaEncuesta()
     {
-        $this->visit("encuesta/servicio/{id}")
+        $this->visit("encuesta/servicio/iniciar")
             ->see("{id}");
     }
 }

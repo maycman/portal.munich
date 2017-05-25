@@ -8,7 +8,7 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
-				<div class="table-responsive">
+				<!--div class="table-responsive"-->
 					<table class="table table-striped">
 						<thead>
 							<tr>
@@ -42,8 +42,8 @@
 						<tbody>
 						@foreach($registro as $reg)
 							<tr>		
-								<form class="form" method="post" action="">
-								<th>{{ $reg->id_registro }}</th>
+								<form class="form" method="get" action="servicio/{{ $reg->id_registro }}">
+								<th>{{ $reg->id_registro }}<input type="hidden" name="id_registro" id="id_registro" value="{{$reg->id_registro}}"></th>
 								<td>{{ $reg->no_orden }}</td>
 								<td>{{ $reg->fecha_insercion }}</td>
 								<td>{{ $reg->nombre_modelo }}</td>
@@ -67,13 +67,13 @@
 								<td>{{ $reg->tipo_servicio }}</td>
 								<td>15,000 km</td>
 								<td>2345</td>
-								<td><a class="btn btn-primary" href="servicio/sencuesta">Iniciar Encuesta</a></td>
+								<td><button type="submit" class="btn btn-primary">Iniciar Encuesta</button></td>
 								</form>
 							</tr>
 						@endforeach
 						</tbody>
 					</table>
-				</div>
+				<!--/div-->
 			</div>
 		</div>
 	</div>

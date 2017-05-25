@@ -17,7 +17,7 @@ Route::get('/', 'portalController@index');
 Route::get('encuesta', 'portalController@encuestas');
 Route::get('encuesta/servicio', 'portalController@encuestaServicio');
 
-Route::get('encuesta/servicio/{id}', 'portalController@cadaEncuestaServicio');
+Route::get('encuesta/servicio/{id_registro}', 'portalController@cadaEncuestaServicio');
 
 Route::get('encuesta/ventas', 'portalController@ventas');
 Route::get('notas', 'portalController@listaEncuestaServicio');
