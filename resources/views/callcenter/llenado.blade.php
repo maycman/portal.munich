@@ -3,10 +3,10 @@
 	<div class="container">
 		<div class="row">
 			<div col-sm-1>
-				<p><STRONG>Nombre:</STRONG> </p>
-				@foreach($registro as $data)
-				<p><strong>Id: {{ $registro->id_registro }}</strong></p>
-				@endforeach
+				<p><STRONG>Nombre: Soy la verga</STRONG> </p>
+					
+				<p><strong>Id: {{ $consulta }}</strong></p>
+				
 			</div>
 		</div>
 	</div>

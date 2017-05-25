@@ -50,7 +50,7 @@ class encuestaTest extends TestCase
     }
     public function testCadaEncuesta()
     {
-        $this->visit("encuesta/servicio/iniciar")
-            ->see("{id}");
+        $this->visit("encuesta/servicio/1")
+            ->see("1");
     }
 }

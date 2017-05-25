@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Transaction;
 use App\nota;
+use Log;
 use App\registro;
 
 class portalController extends Controller
@@ -24,11 +25,23 @@ class portalController extends Controller
 		$registro = registro::all();
 		return view('callcenter/servicio', compact('registro'));
 	}
-	public function cadaEncuestaServicio(Request $request)
+	/*public function cadaEncuestaServicio(Request $request)
 	{
 		#dd($request->get('id_registro'));
-		$registro=registro::id($request->get('id_registro'));
-		return view("callcenter/llenado", compact('registro'));
+		#$registro=registro::id($request->get('id_registro'));
+		$consulta = registro::where('id_registro',$request->get('id_registro'))->first();
+		Log::debug($consulta);
+		return view("callcenter/llenado", compact('consulta'));
+	}*/
+
+	public function cadaEncuestaServicio($id){
+		#Log::debug('------------------------------------------------------------------------------------------------------');
+		#Log::debug($id);
+		$consulta = registro::where('id_registro',$id)->first();
+		#Log::debug('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
+		#Log::debug($consulta);
+		return view("callcenter.llenado", compact('consulta'));
+
 	}
 	public function ventas()
 	{

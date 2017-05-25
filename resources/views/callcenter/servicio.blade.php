@@ -43,7 +43,7 @@
 						@foreach($registro as $reg)
 							<tr>		
 								<form class="form" method="get" action="servicio/{{ $reg->id_registro }}">
-								<th>{{ $reg->id_registro }}<input type="hidden" name="id_registro" id="id_registro" value="{{$reg->id_registro}}"></th>
+								<th>{{ $reg->id_registro }}</th>
 								<td>{{ $reg->no_orden }}</td>
 								<td>{{ $reg->fecha_insercion }}</td>
 								<td>{{ $reg->nombre_modelo }}</td>
