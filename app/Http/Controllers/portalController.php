@@ -33,15 +33,18 @@ class portalController extends Controller
 		Log::debug($consulta);
 		return view("callcenter/llenado", compact('consulta'));
 	}*/
-
-	public function cadaEncuestaServicio($id){
+	public function cadaEncuestaServicio($id)
+	{
 		#Log::debug('------------------------------------------------------------------------------------------------------');
 		#Log::debug($id);
 		$consulta = registro::where('id_registro',$id)->first();
 		#Log::debug('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
 		#Log::debug($consulta);
 		return view("callcenter.llenado", compact('consulta'));
-
+	}
+	public function guardaEncuesta()
+	{
+		return view("Post");
 	}
 	public function ventas()
 	{

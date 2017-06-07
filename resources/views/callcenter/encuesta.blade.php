@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-offset-3 col-sm-6">
-				<img class="img-responsive img-rounded center-block" src="../assets/images/logo.jpg" alt="Responsive image">
+				<img class="img-responsive img-rounded center-block" src="/assets/images/logo.jpg" alt="Responsive image">
 			</div>
 		</div>
 		<div class="row">
