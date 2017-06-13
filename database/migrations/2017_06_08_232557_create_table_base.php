@@ -61,7 +61,7 @@ class CreateTableBase extends Migration
             $table->mediumText('apm_asesor');
             $table->mediumText('tecnico');
             $table->mediumText('contactable');
-            $table->mediumText('cache'));
+            $table->mediumText('cache');
         });
     }
 
