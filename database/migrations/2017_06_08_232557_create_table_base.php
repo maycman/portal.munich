@@ -12,7 +12,7 @@ class CreateTableBase extends Migration
      */
     public function up()
     {
-        Schema::create('registro', function (Blueprint $table)) {
+        Schema::create('registro', function (Blueprint $table) {
             $table->increments('id_registro');
             $table->mediumText('concesionaria');
             $table->mediumText('empresa');
