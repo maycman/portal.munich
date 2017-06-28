@@ -36,8 +36,8 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Call Center <b class="caret"></b></a>
 	        				<ul class="dropdown-menu">
 	          					<li id="encuesta"><a href="/encuesta">Encuestas</a></li>
-	          					<li id="notas"><a href="/notas">Reportes</a></li>
-	          					<li id="Modificar"><a href="#">Modificar Encuesta</a></li>
+	          					<li id="notas"><a href="#">Reportes</a></li>
+	          					<li id="Modificar"><a href="/carga">Cargar base de datos</a></li>
 	          					<li><a href="#">Otros</a></li>
 	        				</ul>
 	      				</li>

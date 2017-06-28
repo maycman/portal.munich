@@ -20,4 +20,4 @@ Route::post('encuesta/servicio/{id}', 'portalController@guardaEncuesta');
 Route::get('encuesta/servicio/{id}', 'portalController@cadaEncuestaServicio');
 
 Route::get('encuesta/ventas', 'portalController@ventas');
-Route::get('notas', 'portalController@listaEncuestaServicio');
+Route::get('carga', 'portalController@cargaBase');

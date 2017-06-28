@@ -12,11 +12,11 @@ class CreateNotasTable extends Migration
      */
     public function up()
     {
-        Schema::create('notas', function (Blueprint $table) {
+        /*Schema::create('notas', function (Blueprint $table) {
             $table->increments('id');
             $table->mediumText('nota');
             $table->timestamps();
-        });
+        });*/
     }
 
     /**
@@ -26,6 +26,6 @@ class CreateNotasTable extends Migration
      */
     public function down()
     {
-        Schema::drop('notas');
+        #Schema::drop('notas');
     }
 }

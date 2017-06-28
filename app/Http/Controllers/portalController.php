@@ -50,10 +50,10 @@ class portalController extends Controller
 	{
 		return view('callcenter/ventas');
 	}
-	public function listaEncuestaServicio()
+	public function cargaBase()
 	{
 		#$notas= Nota::all();
 		//dd($notas);
-		#return view('notas', compact('notas'));
+		return view('callcenter/carga');
 	}
 }
