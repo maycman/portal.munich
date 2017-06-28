@@ -38,6 +38,7 @@
 						@foreach($registro as $reg)
 							<tr>		
 								<form class="form" method="get" action="servicio/{{ $reg->id_registro }}">
+								{!! csrf_field() !!}
 								<th>{{ $reg->id_registro }}</th>
 								<td>{{ $reg->no_orden }}</td>
 								<td>{{ $reg->fecha_insercion }}</td>
