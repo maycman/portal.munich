@@ -62,6 +62,7 @@ class CreateTableBase extends Migration
             $table->mediumText('tecnico');
             $table->mediumText('contactable');
             $table->mediumText('cache');
+            $table->timestamps();
         });
     }
 

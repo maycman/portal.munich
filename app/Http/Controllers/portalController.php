@@ -63,10 +63,11 @@ class portalController extends Controller
 		$file = $request->file('base');
 		$nombre = $file->getClientOriginalName();
 		Excel::load($file, function($reader)
-		{ 
+		{
 			foreach ($reader->get() as $base)
 			{
-				registro::create([
+				return $base;
+				/*registro::create([
 					'concesionaria' => $base->No_Concesionario,
 					'empresa' =>$base->Empresa,
 					'razon_social' =>$base->RazonSocial,
@@ -114,10 +115,10 @@ class portalController extends Controller
 					'apm_asesor' =>$base->AsesorApM,
 					'tecnico' =>$base->Tecnico,
 					'contactable' =>$base->Contacto,
-					'cache' =>$base->Comentarios                
-				]);
+					'cache' =>$base->Comentarios
+				]);*/
 			}
 		});
-		return registro::all();
+		#return registro::all();
 	}
 }

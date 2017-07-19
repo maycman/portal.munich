@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class registro extends Model
 {
-	protected $table = 'registro';
     protected $fillable = [
     	'concesionaria',
     	'empresa',
@@ -56,7 +55,6 @@ class registro extends Model
     	'tecnico',
     	'contactable',
     	'cache'];
-    protected $guarded = ['id_registro'];
 
     public function scopeId($query, $id)
     {
