@@ -118,6 +118,7 @@ class portalController extends Controller
 				]);
 			}
 		});
+		\Alert::message('Base de datos Cargada Correctamente', 'info');
 		return redirect()->to('carga');
 	}
 }

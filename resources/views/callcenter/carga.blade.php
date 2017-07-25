@@ -19,5 +19,6 @@
             {!! Form::close() !!}
 		</div>
 	</div>
+    {!! Alert::render() !!}
 </div>
 @endsection
