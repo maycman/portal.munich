@@ -20,7 +20,7 @@
 								<th>Fecha Orden</th>
 								<th>Modelo</td>
 								<th>Modelo Año</th>
-								<th>Año de fabricación</th>
+								<!--th>Año de fabricación</th-->
 								<th>No. Serie</th>
 								<th>Contactable</th>
 								<th>Correo electronico</th>
@@ -44,7 +44,7 @@
 								<td>{{ $reg->fecha_insercion }}</td>
 								<td>{{ $reg->nombre_modelo }}</td>
 								<td>{{ $reg->ano_modelo }}</td>
-								<td>Vacio aún</td>
+								<!--td>Vacio aún</td-->
 								<td>{{ $reg->chasis }}</td>
 								<td>{{ $reg->contactable }}</td>
 								<td>{{ $reg->email }}</td>
