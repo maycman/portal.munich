@@ -60,3 +60,7 @@ html, body
     cursor: inherit;
     display: block;
 }
+.corausel-inner
+{
+	align-content: center;
+}

@@ -25,7 +25,7 @@
       						<img src="assets/images/im2.jpg" alt="Responsive image">
       						<div class="carousel-caption">...</div>
       					</div>
-      				</div>
+      		</div>
 
       				<!-- Controls -->
       				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
