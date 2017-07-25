@@ -14,7 +14,7 @@
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
     					<div class="item active">
-    						<img src="assets/images/im2.jpg" alt="Responsive image" class="img-responsive">
+    						<img src="assets/images/im.jpg" alt="Responsive image" class="img-responsive">
       						<div class="carousel-caption">...</div>
     					</div>
     					<div class="item">
