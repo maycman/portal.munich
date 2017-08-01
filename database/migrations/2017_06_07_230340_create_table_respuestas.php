@@ -12,7 +12,12 @@ class CreateTableRespuestas extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('repuestas', function (Blueprint $table)
+        {
+            $table->increments('id_repuesta');
+            $table->mediumText('yolo');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +27,6 @@ class CreateTableRespuestas extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('respuestas');
     }
 }
