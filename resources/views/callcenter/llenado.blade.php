@@ -62,7 +62,8 @@
 			<h3>Buenas tardes Sr. <strong>{{ $consulta->nombre.' '.$consulta->ap_paterno.' '.$consulta->ap_materno }}</strong> mi nombre es: <strong>nombre del ejecutivo</strong> le llamo de Volkswagen Munich Automotríz atención a clientes, el motivo de mi llamada es brindarle un mejor servicio y ponerme a sus ordenes ya que recientemente nos visitó, si me permite unos minutos de su tiempo, le realizare algunas preguntas acerca de el servicio que recibio para su vehiculo.</h3>
 		</div>
 		<form class="form" name="guardarEncuesta" method="post" action="{{ url('encuesta/servicio/guardar') }}">
-			{!! csrf_field() !!}
+			{{ csrf_field() }}
+			<input type="hidden" name="id_registro" id="id_registro" value="{{ $consulta->id_registro }}">
 			<div class="row">
 				<div class="col-sm-4 col-sm-offset-4">
 					<div class="form-group">
@@ -80,7 +81,7 @@
 						</div>
 						<div id="agendar" class="form-group collapse">
                 			<div class='input-group date' id='age'>
-                    			<input id="reprogramar" name="reprogramar" type='text' class="form-control"/>
+                    			<input id="reprogramar" name="reprogramar" type='text' class="form-control" required/>
                     			<span class="input-group-addon">
                         			<span class="glyphicon glyphicon-calendar"></span>
                     			</span>

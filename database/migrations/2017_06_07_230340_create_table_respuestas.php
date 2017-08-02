@@ -15,7 +15,7 @@ class CreateTableRespuestas extends Migration
         Schema::create('repuestas', function (Blueprint $table)
         {
             $table->increments('id_repuesta');
-            $table->mediumText('yolo');
+            $table->mediumText('');
             $table->timestamps();
         });
     }
