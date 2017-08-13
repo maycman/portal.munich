@@ -42,10 +42,6 @@ class portalController extends Controller
 		#Log::debug($consulta);
 		return view("callcenter.llenado", compact('consulta'));
 	}
-	public function guardaEncuesta()
-	{
-		return view("Post");
-	}
 	public function ventas()
 	{
 		return view('callcenter/ventas');

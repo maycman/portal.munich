@@ -14,7 +14,11 @@
                     </span>
                 </div>
                 <div class="form-group">
+<<<<<<< HEAD
                 	{!! Form::submit('Agregar Base', ["class" => "btn btn-success btn-block btn-lg"]) !!}
+=======
+                	{!! Form::submit('Alimentar Base de Datos', ["class" => "btn btn-success btn-block btn-lg"]) !!}
+>>>>>>> 099e027c0698a002d9d0ac4f47890aaf6c6e3b5d
                 </div>
             {!! Form::close() !!}
 		</div>

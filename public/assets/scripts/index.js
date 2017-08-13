@@ -34,6 +34,8 @@ function aceptaEncuesta()
 	var input = $('input');
 	var select = $('select');
 	var text = $('textarea');
+	var id = $('#id_registro');
+	var token = $("input[name$='_token']");
 	if (butt.prop('checked'))
 	{
         //Este removeClass hace que al darle click muchas veces siempre funcione el checkbox
@@ -52,23 +54,38 @@ function aceptaEncuesta()
        	select.prop('disabled', true);
        	text.prop('disabled', true);
        	butt.prop('disabled', false);
+       	id.prop('disabled', false);
+       	token.prop('disabled', false);
     }
 }
 function llamarLuego()
 {
+	var butt = $('#acepta');
+	var llamar = $('#llamar');
 	var questions = $('#questions');
 	var fecha = $('#agendar');
-	var input = $('fecha');
-    if ($('#llamar').prop('checked'))
+	var reprogramar = $('#reprogramar');
+	var input = $('input');
+	var select = $('select');
+	var text = $('textarea');
+	var id = $('#id_registro');
+	var token = $("input[name$='_token']");
+    if (llamar.prop('checked'))
     {
     	//Reprogramar
     	//Este removeClass hace que al darle click muchas veces siempre funcione el checkbox
-
     	questions.removeClass();
     	fecha.removeClass();
         questions.addClass('collapse');
         fecha.addClass('form-group collapse in animated fadeInDown');
         input.prop('disabled', true);
+        select.prop('disabled', true);
+        text.prop('disabled', true);
+        reprogramar.prop('disabled', false);
+        token.prop('disabled', false);
+        id.prop('disabled', false);
+        llamar.prop('disabled', false);
+        butt.prop('disabled', false);
     }
     else
     {
@@ -77,7 +94,10 @@ function llamarLuego()
         fecha.removeClass();
         questions.addClass('collapse in animated fadeInDown');
         fecha.addClass('form-group collapse');
-        input.prop('disabled', true);
+        input.prop('disabled', false);
+        select.prop('disabled', false);
+        text.prop('disabled', false);
+        reprogramar.prop('disabled', true);
     }
 }
 function pregunta2()
