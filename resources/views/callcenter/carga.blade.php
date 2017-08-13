@@ -14,7 +14,7 @@
                     </span>
                 </div>
                 <div class="form-group">
-                	{!! Form::submit('Send', ["class" => "btn btn-success btn-block btn-lg"]) !!}
+                	{!! Form::submit('Agregar Base', ["class" => "btn btn-success btn-block btn-lg"]) !!}
                 </div>
             {!! Form::close() !!}
 		</div>
