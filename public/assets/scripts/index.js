@@ -41,21 +41,21 @@ function aceptaEncuesta()
         //Este removeClass hace que al darle click muchas veces siempre funcione el checkbox
         form.removeClass();
        	form.addClass('collapse in animated fadeInDown');
-       	input.prop('disabled', false);
-       	select.prop('disabled', false);
-       	text.prop('disabled', false);
+       	//input.prop('disabled', false);
+       	//select.prop('disabled', false);
+       	//text.prop('disabled', false);
     }
     else
     {
         //Este removeClass hace que al darle click muchas veces siempre funcione el checkbox
         form.removeClass();
        	form.addClass('collapse');
-       	input.prop('disabled', true);
-       	select.prop('disabled', true);
-       	text.prop('disabled', true);
-       	butt.prop('disabled', false);
-       	id.prop('disabled', false);
-       	token.prop('disabled', false);
+       	//input.prop('disabled', true);
+       	//select.prop('disabled', true);
+       	//text.prop('disabled', true);
+       	//butt.prop('disabled', false);
+       	//id.prop('disabled', false);
+       	//token.prop('disabled', false);
     }
 }
 function llamarLuego()
@@ -78,14 +78,14 @@ function llamarLuego()
     	fecha.removeClass();
         questions.addClass('collapse');
         fecha.addClass('form-group collapse in animated fadeInDown');
-        input.prop('disabled', true);
-        select.prop('disabled', true);
-        text.prop('disabled', true);
-        reprogramar.prop('disabled', false);
-        token.prop('disabled', false);
-        id.prop('disabled', false);
-        llamar.prop('disabled', false);
-        butt.prop('disabled', false);
+        //input.prop('disabled', true);
+        //select.prop('disabled', true);
+        //text.prop('disabled', true);
+        //reprogramar.prop('disabled', false);
+        //token.prop('disabled', false);
+        //id.prop('disabled', false);
+        //llamar.prop('disabled', false);
+        //butt.prop('disabled', false);
     }
     else
     {
@@ -94,10 +94,10 @@ function llamarLuego()
         fecha.removeClass();
         questions.addClass('collapse in animated fadeInDown');
         fecha.addClass('form-group collapse');
-        input.prop('disabled', false);
-        select.prop('disabled', false);
-        text.prop('disabled', false);
-        reprogramar.prop('disabled', true);
+        //input.prop('disabled', false);
+        //select.prop('disabled', false);
+        //text.prop('disabled', false);
+        //reprogramar.prop('disabled', true);
     }
 }
 function pregunta2()
