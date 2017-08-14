@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/content/index.css">
 	<link rel="stylesheet" type="text/css" href="/assets/content/navbar.css">
-    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
+    <link rel="stylesheet" type="text/css" href="/assets/content/animate.css">
 </head>
 <body>
 	<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
