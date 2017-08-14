@@ -80,7 +80,7 @@
 							<input onchange="llamarLuego()" id="llamar" name="llamar" type="checkbox" data-toggle="toggle" data-size="large" data-on="Si" data-off="No">
 						</div>
 						<div id="agendar" class="form-group collapse">
-                			<div class='input-group date' id='age'>
+                			<div class='input-group date' id='agenda'>
                     			<input type='text' id="reprogramar" name="reprogramar" class="form-control"/>
                     			<span class="input-group-addon">
                         			<span class="glyphicon glyphicon-calendar"></span>

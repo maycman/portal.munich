@@ -21,3 +21,5 @@ Route::get('encuesta/ventas', 'portalController@ventas');
 Route::get('carga', 'portalController@cargaBase');
 Route::post('cargando','portalController@postBase');
 Route::post('encuesta/servicio/guardar','encuestaController@store');
+Route::get('4semanas','servicioController@index');
+Route::post('guardando','servicioController@store');
