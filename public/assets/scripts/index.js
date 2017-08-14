@@ -42,7 +42,7 @@ function aceptaEncuesta()
         //Este removeClass hace que al darle click muchas veces siempre funcione el checkbox
         form.removeClass();
        	form.addClass('animated rollOut');
-       	setTimeout(function(){form.addClass('collapse');}, 500);
+       	//setTimeout(function(){form.addClass('collapse');}, 500);
     }
 }
 function llamarLuego()
@@ -56,7 +56,7 @@ function llamarLuego()
     	questions.removeClass();
     	fecha.addClass('form-group collapse in animated flipInX');
     	questions.addClass('animated zoomOut');
-        setTimeout(function(){questions.addClass('collapse');}, 500);
+        //setTimeout(function(){questions.addClass('collapse');}, 500);
     }
     else
     {
@@ -64,7 +64,7 @@ function llamarLuego()
         questions.removeClass();
         fecha.removeClass();
         questions.addClass('animated zoomIn');
-        fecha.addClass('form-group collapse');
+        //fecha.addClass('form-group collapse');
     }
 }
 function pregunta2()
