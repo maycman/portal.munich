@@ -80,8 +80,8 @@
 							<input onchange="llamarLuego()" id="llamar" name="llamar" type="checkbox" data-toggle="toggle" data-size="large" data-on="Si" data-off="No">
 						</div>
 						<div id="agendar" class="form-group collapse">
-                			<div class='input-group date' id='age'>
-                    			<input id="reprogramar" name="reprogramar" type='text' class="form-control" required/>
+                			<div class='input-group date' id='agenda'>
+                    			<input type='text' id="reprogramar" name="reprogramar" class="form-control"/>
                     			<span class="input-group-addon">
                         			<span class="glyphicon glyphicon-calendar"></span>
                     			</span>
@@ -94,7 +94,7 @@
 						<div class="col-sm-12">
 							<div class="well">
 								<label role="pregunta1">1. Califique su experiencia de servicio en general en la concesionaria Volkswagen Munich Automotriz.</label>
-								<select id="p1" name="p1" class="form-control" required>
+								<select id="p1" name="p1" class="form-control">
 									<option disabled selected value></option>
 									<option>1</option>
 									<option>2</option>
@@ -116,7 +116,7 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<label role="pregunta2">2. ¿Qué tan satisfecho está con su Asesor de Servicio?</label>
-										<select onchange="pregunta2()" id="p2" name="p2" class="form-control" required>
+										<select onchange="pregunta2()" id="p2" name="p2" class="form-control">
 											<option disabled selected value></option>
 											<option>1</option>
 											<option>2</option>
@@ -352,7 +352,7 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<label role="pregunta4">4. ¿Qué tan satisfecho está con el tiempo transcurrido para que el servicio fuera completado?</label>
-										<select onchange="pregunta4()" id="p4" name="p4" class="form-control" required>
+										<select onchange="pregunta4()" id="p4" name="p4" class="form-control">
 											<option disabled selected value></option>
 											<option>1</option>
 											<option>2</option>
@@ -455,7 +455,7 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<label role="pregunta5">5. ¿Cuál es su nivel de satisfacción con las instalaciones de la concesionaria y amenidades ofrecidas?</label>
-										<select onchange="pregunta5()" id="p5" name="p5" class="form-control" required>
+										<select onchange="pregunta5()" id="p5" name="p5" class="form-control">
 											<option disabled selected value></option>
 											<option>1</option>
 											<option>2</option>
@@ -557,7 +557,7 @@
 							<div class="well">
 								<div class="form-group">
 									<label role="pregunta6">6. ¿Qué tan satisfecho está con la calidad del auto?</label>
-									<select id="p6" name="p6" class="form-control" required>
+									<select id="p6" name="p6" class="form-control">
 										<option disabled selected value></option>
 										<option>1</option>
 										<option>2</option>
@@ -573,7 +573,7 @@
 								</div>
 								<div class="form-group">
 									<label role="prengunta6a">6a. ¿Por qué?</label>
-									<textarea id="p6a" name="p6a" class="form-control" required></textarea>
+									<textarea id="p6a" name="p6a" class="form-control"></textarea>
 								</div>
 							</div><!--well-->
 						</div><!--col-sm-12-->
@@ -583,7 +583,7 @@
 							<div class="well">
 								<div class="form-group">
 									<label role="pregunta7">7. ¿Qué probabilidad hay de que su próxima reparación o servicio sea en esta misma concesionaria?</label>
-									<select id="p7" name="p7" class="form-control" required>
+									<select id="p7" name="p7" class="form-control">
 										<option disabled selected value></option>
 										<option>1</option>
 										<option>2</option>
