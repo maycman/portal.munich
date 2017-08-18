@@ -1,7 +1,11 @@
 $(document).ready(function(){
 	classActive();
 	//$('.date').datepicker('update', new Date());
-	$('#age').datetimepicker();
+	$('#agenda').datetimepicker();
+	$('.age').datetimepicker({
+		format: 'L'
+	});
+	$("#datosServicio").css("display","none");
 });
 
 
@@ -42,7 +46,7 @@ function aceptaEncuesta()
         //Este removeClass hace que al darle click muchas veces siempre funcione el checkbox
         form.removeClass();
        	form.addClass('animated rollOut');
-       	setTimeout(function(){form.addClass('collapse');}, 500);
+       	//setTimeout(function(){form.addClass('collapse');}, 500);
     }
 }
 function llamarLuego()
@@ -56,7 +60,7 @@ function llamarLuego()
     	questions.removeClass();
     	fecha.addClass('form-group collapse in animated flipInX');
     	questions.addClass('animated zoomOut');
-        setTimeout(function(){questions.addClass('collapse');}, 500);
+        //setTimeout(function(){questions.addClass('collapse');}, 500);
     }
     else
     {
@@ -64,7 +68,7 @@ function llamarLuego()
         questions.removeClass();
         fecha.removeClass();
         questions.addClass('animated zoomIn');
-        fecha.addClass('form-group collapse');
+        //fecha.addClass('form-group collapse');
     }
 }
 function pregunta2()
@@ -127,4 +131,26 @@ function pregunta4()
 		content.removeClass();
 		content.addClass("collapse");
 	}
+}
+function agregarServicio()
+{
+	var button = $("#boton");
+	var campos = $("#datosServicio");
+	var input1 = $("#ultimo_servicio");
+	var input2 = $("#fecha_ultimo_servicio");
+	var input3 = $("#servicio_pendiente");
+	var input4 = $("#proximo_servicio");
+	var input5 = $("#fecha_proximo_servicio");
+	if (button.prop('checked'))
+	{
+		campos.css("display","block");
+	}
+	else
+	{
+		campos.css("display","none");
+	}
+}
+function liberarAuto()
+{
+	document.getElementById('liberar').click();
 }
