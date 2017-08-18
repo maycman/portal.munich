@@ -72,6 +72,10 @@ body
 {
 	padding-top: 5em;
 }
+.vertical-double
+{
+	padding-top: 12em;
+}
 .mgn-top
 {
 	padding-top: 2em;
@@ -87,4 +91,8 @@ body
 .title-sub
 {
 	font-size: 46px;
+}
+hide
+{
+	display:none;
 }

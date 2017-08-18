@@ -150,3 +150,7 @@ function agregarServicio()
 		campos.css("display","none");
 	}
 }
+function liberarAuto()
+{
+	document.getElementById('liberar').click();
+}

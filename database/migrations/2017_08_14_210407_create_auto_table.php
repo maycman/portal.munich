@@ -23,6 +23,7 @@ class CreateAutoTable extends Migration
             $table->string('proximo_servicio')->nullable();
             $table->date('fecha_proximo_servicio')->nullable();
             $table->string('tecnico')->nullable();
+            $table->string('estado')->nullable();
             $table->timestamps();
         });
     }

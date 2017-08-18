@@ -20,6 +20,7 @@
 	</div>
 </div>
 @include("autos.nuevoRegistro")
+@include("autos.confirmar")
 <div class="container-fluid mgn-top animated bounceInUp">
 	<div class="row">
 		<div class="col-sm-12">
@@ -36,6 +37,7 @@
 						<th>Proximo servicio</th>
 						<th>Fecha proximo servicio</th>
 						<th>Tecnico que llevó el servicio</th>
+						<th>Acción</th>
 					</thead>
 					<tbody>
 						@foreach($datos as $row)
@@ -50,6 +52,13 @@
 							<td>{{ $row->proximo_servicio }}</td>
 							<td>{{ $row->fecha_proximo_servicio }}</td>
 							<td>{{ $row->tecnico }}</td>
+							<td>
+								<a class="btn btn-default btn-small" href="4semanas/agrega/{{ $row->id_auto }}">Agregar servicio</a>
+								@if($row->tecnico!="")
+								<a data-toggle="modal" class="btn btn-default btn-small" href="#confirmar">Liberar</a>
+								<a id="liberar" class="hide" href="4semanas/liberar/{{ $row->id_auto }}">Submit</a>
+								@endif
+							</td>
 						</tr>
 						@endforeach
 					</tbody>

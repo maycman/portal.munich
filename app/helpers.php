@@ -4,9 +4,17 @@ function formatDate($param)
 {
 	if($param!="")
 	{
-		$array=explode("/", $param);
-    	$fecha = $array[2].'/'.$array[0].'/'.$array[1];
-    	return $fecha;
+		if (strpos($param, "-"))
+		{
+			$fecha = str_replace("-", "/", $param);
+    		return $fecha;
+		}
+		else
+		{
+			$array=explode("/", $param);
+    		$fecha = $array[2].'/'.$array[0].'/'.$array[1];
+    		return $fecha;
+		}
 	}
 	else
 	{

@@ -13,7 +13,7 @@
       				<div class="form-group">
       					<label role="fecha_llegada">Fecha llegada</label>
       					<div class='input-group date age'>
-                    		<input id="fecha_llegada" name="fecha_llegada" type='text' class="form-control" />
+                    		<input id="fecha_llegada" name="fecha_llegada" type='text' class="form-control"/>
                     		<span class="input-group-addon">
                         		<span class="glyphicon glyphicon-calendar"></span>
                     		</span>
@@ -23,7 +23,7 @@
       					<label role="chasis">Chasis</label>
       					<input type="text" id="chasis" name="chasis" class="form-control">
       				</div>
-      				<div class="form-group mgn-top">
+      				<div class="form-group">
       					<label role="tipo">Tipo de automovil</label>
       					<input type="text" name="tipo_auto" id="tipo_auto" class="form-control">
       				</div>
@@ -35,7 +35,7 @@
 			</div>
 			<div id="datosServicio">
       		<fieldset>
-      			<legends>Datos de servicio</legend>
+      			<legend>Datos de servicio</legend>
       			<div class="form-inline">
       				<div class="form-group">
       					<label role="ultimo_servicio">Ultimo servicio realizado</label>

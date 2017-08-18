@@ -17,7 +17,7 @@ class servicioController extends Controller
      */
     public function index()
     {
-        $datos = auto::all();
+        $datos =auto::where('estado','')->get();
         return view("autos.list", compact('datos'));
     }
 
@@ -53,7 +53,7 @@ class servicioController extends Controller
         $row->fecha_proximo_servicio = $fecha_proximo_servicio;
         $row->save();
         \Alert::message('Nuevo auto cargado', 'info');
-        return redirect()->to('/');
+        return redirect()->to('4semanas');
     }
 
     /**
@@ -75,7 +75,8 @@ class servicioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $registro = auto::where('id_auto', $id)->first();
+        return view('autos.edit', compact('registro'));
     }
 
     /**
@@ -85,9 +86,31 @@ class servicioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $nuevaFechaLlegada = $request->fecha_llegada;
+        $nuevoChasis = $request->chasis;
+        $ultimo_servicio = $request->ultimo_servicio;
+        $fecha_ultimo_servicio = formatDate($request->fecha_ultimo_servicio);
+        $servicio_pendiente = $request->servicio_pendiente;
+        $proximo_servicio = $request->proximo_servicio;
+        $fecha_proximo_servicio = formatDate($request->fecha_proximo_servicio);
+        $tecnico = $request->tecnico;
+
+        //Database
+        $id=$request->id_auto;
+        $row = auto::find($id);
+        $row->fecha_llegada = $nuevaFechaLlegada;
+        $row->chasis = $nuevoChasis;
+        $row->ultimo_servicio = $ultimo_servicio;
+        $row->fecha_ultimo_servicio = $fecha_ultimo_servicio;
+        $row->servicio_pendiente = $servicio_pendiente;
+        $row->proximo_servicio = $proximo_servicio;
+        $row->fecha_proximo_servicio = $fecha_proximo_servicio;
+        $row->tecnico = $tecnico;
+        $row->save();
+        \Alert::message('Datos actualizados correctamente', 'success');
+        return redirect()->to('4semanas');
     }
 
     /**
@@ -98,6 +121,10 @@ class servicioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $row = auto::find($id);
+        $row->estado = "concluido";
+        $row->save();
+        \Alert::message('Auto liberado', 'success');
+        return redirect()->to('4semanas');
     }
 }

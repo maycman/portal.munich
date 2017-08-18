@@ -20,6 +20,15 @@ Route::get('encuesta/servicio/{id}', 'portalController@cadaEncuestaServicio');
 Route::get('encuesta/ventas', 'portalController@ventas');
 Route::get('carga', 'portalController@cargaBase');
 Route::post('cargando','portalController@postBase');
+
 Route::post('encuesta/servicio/guardar','encuestaController@store');
+
+
 Route::get('4semanas','servicioController@index');
 Route::post('guardando','servicioController@store');
+
+
+Route::get('4semanas/agrega/{id}','servicioController@edit');
+Route::post('4semanas/guarda','servicioController@update');
+
+Route::get('4semanas/liberar/{id}','servicioController@destroy');
