@@ -56,7 +56,7 @@
 							<td>{{ $row->tecnico }}</td>
 							<td>
 								<a class="btn btn-default btn-small" href="/4semanas/agrega/{{ $row->id_auto }}">
-								@if($row->ultimo_servicio==""||$row->ultimo_servicio==null)
+								@if($row->tecnico==""||$row->ultimo_servicio==null)
 								Agregar servicio
 								@else
 								Editar
