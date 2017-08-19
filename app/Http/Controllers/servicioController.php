@@ -41,6 +41,7 @@ class servicioController extends Controller
     {
         $fecha_llegada = formatDate($request->fecha_llegada);
         $fecha_ultimo_servicio = formatDate($request->fecha_ultimo_servicio);
+	$fecha_servicio_pendiente = formatDate($request->fecha_servicio_pendiente);
         $fecha_proximo_servicio = formatDate($request->fecha_proximo_servicio);
         $row = new auto;
         $row->fecha_llegada = $fecha_llegada;
@@ -49,6 +50,7 @@ class servicioController extends Controller
         $row->ultimo_servicio = $request->ultimo_servicio;
         $row->fecha_ultimo_servicio = $fecha_ultimo_servicio;
         $row->servicio_pendiente = $request->servicio_pendiente;
+	$row->fecha_servicio_pendiente = $fecha_servicio_pendiente;
         $row->proximo_servicio = $request->proximo_servicio;
         $row->fecha_proximo_servicio = $fecha_proximo_servicio;
         $row->save();
@@ -93,6 +95,7 @@ class servicioController extends Controller
         $ultimo_servicio = $request->ultimo_servicio;
         $fecha_ultimo_servicio = formatDate($request->fecha_ultimo_servicio);
         $servicio_pendiente = $request->servicio_pendiente;
+	$fecha_servicio_pendiente = formatDate($request->fecha_servicio_pendiente);
         $proximo_servicio = $request->proximo_servicio;
         $fecha_proximo_servicio = formatDate($request->fecha_proximo_servicio);
         $tecnico = $request->tecnico;
@@ -105,6 +108,7 @@ class servicioController extends Controller
         $row->ultimo_servicio = $ultimo_servicio;
         $row->fecha_ultimo_servicio = $fecha_ultimo_servicio;
         $row->servicio_pendiente = $servicio_pendiente;
+	$row->fecha_servicio_pendiente = $fecha_servicio_pendiente;
         $row->proximo_servicio = $proximo_servicio;
         $row->fecha_proximo_servicio = $fecha_proximo_servicio;
         $row->tecnico = $tecnico;
