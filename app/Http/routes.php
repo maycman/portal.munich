@@ -24,11 +24,11 @@ Route::post('cargando','portalController@postBase');
 Route::post('encuesta/servicio/guardar','encuestaController@store');
 
 
-Route::get('4semanas','servicioController@index');
-Route::post('guardando','servicioController@store');
+Route::get('/4semanas','servicioController@index');
+Route::post('/4semanas/guardando','servicioController@store');
 
 
-Route::get('4semanas/agrega/{id}','servicioController@edit');
-Route::post('4semanas/guarda','servicioController@update');
+Route::get('/4semanas/agrega/{id}','servicioController@edit');
+Route::post('/4semanas/guarda','servicioController@update');
 
-Route::get('4semanas/liberar/{id}','servicioController@destroy');
+Route::get('/4semanas/liberar/{id}','servicioController@destroy');

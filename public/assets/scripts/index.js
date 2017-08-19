@@ -154,3 +154,21 @@ function liberarAuto()
 {
 	document.getElementById('liberar').click();
 }
+function modificarFecha(param)
+{
+    idInput = param.substring(8);
+	idAge = idInput.replace(/_/g,'-');
+	alert(idInput);
+	alert(idAge);
+
+
+	input = $('#'+idInput);
+	divAge = $('#'+idAge);
+	
+
+	input.removeAttr("readonly");
+	divAge.addClass('input-group date age');
+	$('.age').datetimepicker({
+		format: 'L'
+	});
+}

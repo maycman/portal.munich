@@ -6,7 +6,7 @@
         	<h4 class="modal-title">¡Atención!</h4>
         </div>
         <div class="modal-body">
-        	<h1>Este registro ya no podra ser modificado ¿desea continuar?</h1>
+        	<h1>Este registro ya no podra ser modificado ¿Desea continuar?</h1>
         </div>
         <div class="modal-footer">
             <button onclick="liberarAuto()" type="button" id="confirma" class="btn btn-success" data-dismiss="modal">Si</button>

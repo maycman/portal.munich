@@ -6,7 +6,7 @@
         	<h4 class="modal-title">Nuevo Registro</h4>
       	</div>
       	<div class="modal-body">
-      	{!! Form::open(array('url' => 'guardando', 'method' => 'post')) !!}
+      	{!! Form::open(array('url' => '/4semanas/guardando', 'method' => 'post')) !!}
       		<fieldset>
   				<legend>Datos del auto</legend>
   				<div class="form-inline">
@@ -54,6 +54,15 @@
       					<label role="servicio_pendiente">Servicio pendiente</label>
       					<input type="text" name="servicio_pendiente" id="servicio_pendiente" class="form-control">
       				</div>
+              <div class="form-group">
+                <label role="fecha_servicio_pendiente">Fecha servicio pendiente</label>
+                <div class='input-group date age'>
+                        <input id="fecha_servicio_pendiente" name="fecha_servicio_pendiente" type='text' class="form-control">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+              </div>
       				<div class="form-group mgn-top mgn-left">
       					<label role="proximo_servicio">Proximo servicio</label>
       					<input type="text" name="proximo_servicio" id="proximo_servicio" class="form-control">
@@ -77,7 +86,7 @@
       	</div>
       	<div class="modal-footer">
         	<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        	{!! Form::submit('Guardar', ["class" => "btn btn-default"]) !!}
+        	{!! Form::submit('Guardar', ["class" => "btn btn-success"]) !!}
         {!! Form::close() !!}
       	</div>
     </div>

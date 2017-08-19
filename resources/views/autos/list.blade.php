@@ -34,6 +34,7 @@
 						<th>Ultimo servicio realizado</th>
 						<th>Fecha ultimo servicio</th>
 						<th>Servicio pendiente</th>
+						<th>Fecha servicio pendiente</th>
 						<th>Proximo servicio</th>
 						<th>Fecha proximo servicio</th>
 						<th>Tecnico que llevó el servicio</th>
@@ -49,14 +50,21 @@
 							<td>{{ $row->ultimo_servicio }}</td>
 							<td>{{ $row->fecha_ultimo_servicio }}</td>
 							<td>{{ $row->servicio_pendiente }}</td>
+							<td>{{ $row->fecha_servicio_pendiente }}</td>
 							<td>{{ $row->proximo_servicio }}</td>
 							<td>{{ $row->fecha_proximo_servicio }}</td>
 							<td>{{ $row->tecnico }}</td>
 							<td>
-								<a class="btn btn-default btn-small" href="4semanas/agrega/{{ $row->id_auto }}">Agregar servicio</a>
+								<a class="btn btn-default btn-small" href="/4semanas/agrega/{{ $row->id_auto }}">
+								@if($row->ultimo_servicio==""||$row->ultimo_servicio==null)
+								Agregar servicio
+								@else
+								Editar
+								@endif
+								</a>
 								@if($row->tecnico!="")
-								<a data-toggle="modal" class="btn btn-default btn-small" href="#confirmar">Liberar</a>
-								<a id="liberar" class="hide" href="4semanas/liberar/{{ $row->id_auto }}">Submit</a>
+								<a data-toggle="modal" class="btn btn-success btn-small" href="#confirmar">Liberar</a>
+								<a id="liberar" class="hide" href="/4semanas/liberar/{{ $row->id_auto }}">Submit</a>
 								@endif
 							</td>
 						</tr>

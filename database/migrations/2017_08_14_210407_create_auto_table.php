@@ -20,7 +20,7 @@ class CreateAutoTable extends Migration
             $table->string('ultimo_servicio')->nullable();
             $table->date('fecha_ultimo_servicio')->nullable();
             $table->string('servicio_pendiente')->nullable();
-            $table->string('fecha_servicio_pendiente')->nullable();
+            $table->date('fecha_servicio_pendiente')->nullable();
             $table->string('proximo_servicio')->nullable();
             $table->date('fecha_proximo_servicio')->nullable();
             $table->string('tecnico')->nullable();

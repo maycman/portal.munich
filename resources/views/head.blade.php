@@ -28,7 +28,7 @@
                     <li id="mdrop" class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicio <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li id="4 semanas"><a href="4semanas">4 Semanas</a></li>
+                            <li id="4 semanas"><a href="/4semanas">4 Semanas</a></li>
                             <li><a href="#">Correcciones</a></li>
                             <li><a href="#">Otros</a></li>
                         </ul>
