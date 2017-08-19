@@ -18,7 +18,7 @@ class servicioController extends Controller
      */
     public function index()
     {
-        $datos =auto::where('estado','')->get();
+        $datos =auto::where('estado','')->orWhere('estado','NULL')->get();
         return view("autos.list", compact('datos'));
     }
 
