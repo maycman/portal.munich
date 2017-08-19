@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\auto;
-use App\helpers;
 
 class servicioController extends Controller
 {
@@ -18,7 +17,7 @@ class servicioController extends Controller
      */
     public function index()
     {
-        $datos =auto::where('estado','')->orWhere('estado','NULL')->get();
+        $datos =auto::where('estado','')->orWhere('estado',null)->get();
         return view("autos.list", compact('datos'));
     }
 
