@@ -158,9 +158,6 @@ function modificarFecha(param)
 {
     idInput = param.substring(8);
 	idAge = idInput.replace(/_/g,'-');
-	alert(idInput);
-	alert(idAge);
-
 
 	input = $('#'+idInput);
 	divAge = $('#'+idAge);
