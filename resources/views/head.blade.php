@@ -20,15 +20,15 @@
 	        			<ul class="dropdown-menu">
 	          				<li id="encuesta"><a href="/encuesta">Encuestas</a></li>
 	          				<li><a href="#">Reportes</a></li>
-	          				<li id="Modificar"><a href="/carga">Cargar base de datos</a></li>
+	          				<li id="baseUp"><a href="/carga">Cargar base de datos</a></li>
 	          				<li><a href="#">Otros</a></li>
 	        			</ul>
 	      			</li>
         			<li><a href="#">Ventas</a></li>
-                    <li id="mdrop" class="dropdown">
+                    <li id="servicioDrop" class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicio <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li id="4 semanas"><a href="/4semanas">4 Semanas</a></li>
+                            <li id="4semanas"><a href="/4semanas">4 Semanas</a></li>
                             <li><a href="#">Correcciones</a></li>
                             <li><a href="#">Otros</a></li>
                         </ul>

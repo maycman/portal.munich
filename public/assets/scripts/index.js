@@ -21,10 +21,15 @@ function classActive()
 		$('#'+pag).addClass("active");
 		$('#mdrop').addClass("active");
 	}
-	else if(pag=='notas')
+	else if(pag=='carga')
 	{
-		$('#'+pag).addClass("active");
+		$('#baseUp'+pag).addClass("active");
 		$('#mdrop').addClass("active");
+	}
+	else if(pag=='4semanas')
+	{
+		$('#4semanas'+pag).addClass("active");
+		$('#servicioDrop').addClass("active");
 	}
 	else if(pag=="")
 	{

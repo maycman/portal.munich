@@ -41,13 +41,6 @@ class encuestaTest extends TestCase
     		//Then
     		->see("Encuestas de servicio");
     }
-    public function testEncuestaVentas()
-    {
-    	//When
-    	$this->visit("encuesta/ventas")
-    		//Then
-    		->see("Encuestas de ventas");
-    }
     public function testCadaEncuesta()
     {
         $this->visit("encuesta/servicio/1")
