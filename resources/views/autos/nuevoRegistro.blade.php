@@ -13,7 +13,7 @@
       				<div class="form-group">
       					<label role="fecha_llegada">Fecha llegada</label>
       					<div class='input-group date age'>
-                    		<input id="fecha_llegada" name="fecha_llegada" type='text' class="form-control"/>
+                    		<input id="fecha_llegada" name="fecha_llegada" type='text' class="form-control" required/>
                     		<span class="input-group-addon">
                         		<span class="glyphicon glyphicon-calendar"></span>
                     		</span>
@@ -21,11 +21,11 @@
       				</div>
       				<div class="form-group mgn-left">
       					<label role="chasis">Chasis</label>
-      					<input type="text" id="chasis" name="chasis" class="form-control">
+      					<input type="text" id="chasis" name="chasis" class="form-control" required>
       				</div>
       				<div class="form-group">
       					<label role="tipo">Tipo de automovil</label>
-      					<input type="text" name="tipo_auto" id="tipo_auto" class="form-control">
+      					<input type="text" name="tipo_auto" id="tipo_auto" class="form-control" required>
       				</div>
       			</div>
       		</fieldset>
