@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 function classActive()
 {
-	//Implementación de juego de clases
+	//Asigna la clase active de bootstrap en la pestaña del menu actual
 	var pag = location.href.substring(location.href.lastIndexOf('/')+1, location.href.lastIndexOf(''));
 	if (pag=="encuesta")
 	{
