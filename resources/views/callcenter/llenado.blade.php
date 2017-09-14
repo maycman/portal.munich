@@ -63,7 +63,7 @@
 		</div>
 		<form class="form" name="guardarEncuesta" method="post" action="{{ url('encuesta/servicio/guardar') }}">
 			{{ csrf_field() }}
-			<input type="hidden" name="id_registro" id="id_registro" value="{{ $consulta->id_registro }}">
+			{!! Form::hidden('id_registro', $consulta->id_registro, array('id' => 'id_registro')) !!}
 			<div class="row">
 				<div class="col-sm-4 col-sm-offset-4">
 					<div class="form-group">
