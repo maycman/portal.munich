@@ -33,7 +33,7 @@
 				<label role="aceptaEncuesta">¿Agregar datos de servicio?</label>
 				<input onchange="agregarServicio()" id="boton" type="checkbox" data-toggle="toggle" data-size="large" data-on="Si" data-off="No">
 			</div>
-			<div id="datosServicio">
+			<div id="datosServicio" class="hide">
       		<fieldset>
       			<legend>Datos de servicio</legend>
       			<div class="form-inline">
@@ -87,7 +87,7 @@
       	<div class="modal-footer">
         	<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         	{!! Form::submit('Guardar', ["class" => "btn btn-success"]) !!}
-        {!! Form::close() !!}
+          {!! Form::close() !!}
       	</div>
     </div>
   </div>

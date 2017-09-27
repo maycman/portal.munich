@@ -20,7 +20,7 @@
 	        			<ul class="dropdown-menu">
 	          				<li id="encuesta"><a href="/encuesta">Encuestas</a></li>
 	          				<li><a href="#">Reportes</a></li>
-	          				<li id="baseUp"><a href="/carga">Cargar base de datos</a></li>
+	          				<li id="carga"><a href="/carga">Cargar base de datos</a></li>
 	          				<li><a href="#">Otros</a></li>
 	        			</ul>
 	      			</li>

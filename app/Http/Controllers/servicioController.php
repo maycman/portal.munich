@@ -17,7 +17,7 @@ class servicioController extends Controller
      */
     public function index()
     {
-        $datos =auto::where('estado','')->orWhere('estado',null)->get();
+        $datos =auto::where('estado','')->orWhere('estado',null)->orderBy('id_auto', 'DESC')->paginate(40);
         return view("autos.list", compact('datos'));
     }
 

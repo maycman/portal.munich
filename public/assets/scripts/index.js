@@ -1,11 +1,6 @@
 $(document).ready(function(){
 	classActive();
-	//$('.date').datepicker('update', new Date());
-	$('#agenda').datetimepicker();
-	$('.age').datetimepicker({
-		format: 'L'
-	});
-	$("#datosServicio").css("display","none");
+	calendarioForms();
 });
 
 
@@ -14,7 +9,7 @@ $(document).ready(function(){
 
 function classActive()
 {
-	//Asigna la clase active de bootstrap en la pestaña del menu actual
+	//Asigna la clase 'active' de bootstrap en la pestaña del menu actual
 	var pag = location.href.substring(location.href.lastIndexOf('/')+1, location.href.lastIndexOf(''));
 	if (pag=="encuesta")
 	{
@@ -23,18 +18,28 @@ function classActive()
 	}
 	else if(pag=='carga')
 	{
-		$('#baseUp'+pag).addClass("active");
+		$('#'+pag).addClass("active");
 		$('#mdrop').addClass("active");
 	}
 	else if(pag=='4semanas')
 	{
-		$('#4semanas'+pag).addClass("active");
+		$('#'+pag).addClass("active");
 		$('#servicioDrop').addClass("active");
 	}
 	else if(pag=="")
 	{
 		$('#home').addClass("active");
 	}
+}
+function calendarioForms()
+{
+	//Esta funcion hace que los input de fechas en cada formulario muestran un calendario
+	//$('#noOne').datetimepicker();
+	//Esta funcion agrega un formato unicamente con fecha mes/día/año sin timer
+	$('.age').datetimepicker({
+		format: 'L'
+	});
+	//$('.nuevaFecha').datepicker('update', new Date());
 }
 function aceptaEncuesta()
 {
@@ -44,14 +49,14 @@ function aceptaEncuesta()
 	{
         //Este removeClass hace que al darle click muchas veces siempre funcione el checkbox
         form.removeClass();
-       	form.addClass('collapse in animated rollIn');
+       	form.addClass('animated rollIn');
     }
     else
     {
         //Este removeClass hace que al darle click muchas veces siempre funcione el checkbox
         form.removeClass();
        	form.addClass('animated rollOut');
-       	//setTimeout(function(){form.addClass('collapse');}, 500);
+       	setTimeout(function(){form.addClass('hide');}, 500);
     }
 }
 function llamarLuego()
@@ -139,15 +144,12 @@ function pregunta4()
 }
 function agregarServicio()
 {
+	//Esta función oculta o muestra campos para agregar el servicio desde que ingresas un nuevo auto
 	var button = $("#boton");
 	var campos = $("#datosServicio");
-	var input1 = $("#ultimo_servicio");
-	var input2 = $("#fecha_ultimo_servicio");
-	var input3 = $("#servicio_pendiente");
-	var input4 = $("#proximo_servicio");
-	var input5 = $("#fecha_proximo_servicio");
 	if (button.prop('checked'))
 	{
+		campos.removeClass();
 		campos.css("display","block");
 	}
 	else

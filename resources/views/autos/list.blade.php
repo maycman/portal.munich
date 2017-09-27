@@ -12,6 +12,9 @@
 		<div class="col-sm-2">
 			<button class="btn btn-block btn-default" data-toggle="modal" data-target="#nuevo">Nuevo registro</button>
 		</div>
+		<div class="col-sm-2">
+			<button class="btn btn-block btn-primary" data-toggle="modal" data-target="#busqueda">Buscar</button>
+		</div>
 	</div>
 	<div class="row">
 		<div class="col-sm-2 mgn-top">
@@ -21,6 +24,7 @@
 </div>
 @include("autos.nuevoRegistro")
 @include("autos.confirmar")
+@include("autos.busqueda")
 <div class="container-fluid mgn-top animated bounceInUp">
 	<div class="row">
 		<div class="col-sm-12">
@@ -72,6 +76,11 @@
 					</tbody>
 				</table>
 			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-offset-4 col-sm-4">
+			{!! $datos->render() !!}
 		</div>
 	</div>
 </div>

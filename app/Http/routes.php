@@ -26,6 +26,7 @@ Route::post('encuesta/servicio/guardar','encuestaController@store');
 
 Route::get('/4semanas','servicioController@index');
 Route::post('/4semanas/guardando','servicioController@store');
+Route::post('/4semanas/buscando','servicioController@show');
 
 
 Route::get('/4semanas/agrega/{id}','servicioController@edit');
