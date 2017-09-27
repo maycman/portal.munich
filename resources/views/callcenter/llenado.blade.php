@@ -77,9 +77,9 @@
 					<div class="col-sm-4 col-sm-offset-4">
 						<div class="form-group">
 							<label role="Llamar mas tarde">¿Reprogramar Llamada?</label>
-							<input onchange="llamarLuego()" id="llamar" name="llamar" type="checkbox" data-toggle="toggle" data-size="large" data-on="Si" data-off="No">
+							<input onchange="llamarLuego()" id="butonReprograma" name="butonReprograma" type="checkbox" data-toggle="toggle" data-size="large" data-on="Si" data-off="No">
 						</div>
-						<div id="agendar" class="form-group collapse">
+						<div id="agendar" class="form-group hide">
                 			<div class='input-group date' id='agenda'>
                     			<input type='text' id="reprogramar" name="reprogramar" class="form-control"/>
                     			<span class="input-group-addon">

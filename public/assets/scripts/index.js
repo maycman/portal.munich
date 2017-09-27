@@ -34,7 +34,9 @@ function classActive()
 function calendarioForms()
 {
 	//Esta funcion hace que los input de fechas en cada formulario muestran un calendario
-	//$('#noOne').datetimepicker();
+
+	//Se agrega al elemento 'agendar' formato para fecha y hora completos en 'reprogramar llamada' para la parte de CallCenter->encuestas->encuesta servicio->Iniciar encuesta
+	$('#agendar').datetimepicker();
 	//Esta funcion agrega un formato unicamente con fecha mes/día/año sin timer
 	$('.age').datetimepicker({
 		format: 'L'
@@ -43,6 +45,7 @@ function calendarioForms()
 }
 function aceptaEncuesta()
 {
+	//Esta funcion esconde o muestra la encuesta en el apartado de CallCenter->Encuestas->encuesta servicio->Iniciar Encuesta
 	var butt = $('#acepta');
 	var form = $('#preguntas');
 	if (butt.prop('checked'))
@@ -53,32 +56,35 @@ function aceptaEncuesta()
     }
     else
     {
-        //Este removeClass hace que al darle click muchas veces siempre funcione el checkbox
         form.removeClass();
        	form.addClass('animated rollOut');
+       	//La clase anterior crea una animacion para ocultar pero deja un espacio grande, con la sig linea se agrega una clase despues de el tiempo de la animación para ocultar completamente la encuesta
        	setTimeout(function(){form.addClass('hide');}, 500);
     }
 }
 function llamarLuego()
 {
-	var llamar = $('#llamar');
-	var questions = $('#questions');
+	//Esta funcion permite ocultar la encuesta y mostrar un input para reprogramar la encuesta asi como 
+	var llamar = $('#butonReprograma');
+	var encuesta = $('#questions');
 	var fecha = $('#agendar');
     if (llamar.prop('checked'))
     {
-    	//Este removeClass hace que al darle click muchas veces siempre funcione el checkbox
-    	questions.removeClass();
-    	fecha.addClass('form-group collapse in animated flipInX');
-    	questions.addClass('animated zoomOut');
-        //setTimeout(function(){questions.addClass('collapse');}, 500);
+    	//Estos removeClass hacen que al darle click muchas veces siempre funcione el checkbox
+    	encuesta.removeClass();
+    	fecha.removeClass();
+
+    	fecha.addClass('form-group animated flipInX');
+    	encuesta.addClass('animated zoomOut');
+        setTimeout(function(){encuesta.addClass('hide');}, 500);
     }
     else
     {
-    	//Este removeClass hace que al darle click muchas veces siempre funcione el checkbox
-        questions.removeClass();
+        encuesta.removeClass();
         fecha.removeClass();
-        questions.addClass('animated zoomIn');
-        //fecha.addClass('form-group collapse');
+        encuesta.addClass('animated zoomIn');
+        fecha.addClass('form-group animated flipOutX');
+        setTimeout(function(){fecha.addClass('hide');}, 500);
     }
 }
 function pregunta2()
