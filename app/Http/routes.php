@@ -17,19 +17,15 @@ Route::get('/', 'portalController@index');
 Route::get('encuesta', 'portalController@encuestas');
 Route::get('encuesta/servicio', 'portalController@encuestaServicio');
 Route::get('encuesta/servicio/{id}', 'portalController@cadaEncuestaServicio');
-Route::get('encuesta/ventas', 'portalController@ventas');
+Route::post('encuesta/servicio/guardar','encuestaController@store');
+#Route::get('encuesta/ventas', 'portalController@ventas');
 Route::get('carga', 'portalController@cargaBase');
 Route::post('cargando','portalController@postBase');
-
-Route::post('encuesta/servicio/guardar','encuestaController@store');
 
 
 Route::get('/4semanas','servicioController@index');
 Route::post('/4semanas/guardando','servicioController@store');
-Route::post('/4semanas/buscando','servicioController@show');
-
-
 Route::get('/4semanas/agrega/{id}','servicioController@edit');
 Route::post('/4semanas/guarda','servicioController@update');
-
 Route::get('/4semanas/liberar/{id}','servicioController@destroy');
+Route::post('/4semanas/buscando','servicioController@show');

@@ -68,7 +68,7 @@
 				<div class="col-sm-4 col-sm-offset-4">
 					<div class="form-group">
 						<label role="aceptaEncuesta">¿Acepta Encuesta?</label>
-						<input onchange="aceptaEncuesta()" id="acepta" name="acepta" type="checkbox" data-toggle="toggle" data-size="large" data-on="Si" data-off="No" checked>
+						<input onchange="aceptaEncuesta()" id="acepta" type="checkbox" data-toggle="toggle" data-size="large" data-on="Si" data-off="No" checked>
 					</div>
 				</div>
 			</div>
@@ -80,8 +80,8 @@
 							<input onchange="llamarLuego()" id="butonReprograma" name="butonReprograma" type="checkbox" data-toggle="toggle" data-size="large" data-on="Si" data-off="No">
 						</div>
 						<div id="agendar" class="form-group hide">
-                			<div class='input-group date' id='agenda'>
-                    			<input type='text' id="reprogramar" name="reprogramar" class="form-control"/>
+                			<div class='input-group date picker'>
+                    			<input type='text' id="reprogramar" name="reprogramar" class="form-control" disabled/>
                     			<span class="input-group-addon">
                         			<span class="glyphicon glyphicon-calendar"></span>
                     			</span>
@@ -96,16 +96,9 @@
 								<label role="pregunta1">1. Califique su experiencia de servicio en general en la concesionaria Volkswagen Munich Automotriz.</label>
 								<select id="p1" name="p1" class="form-control">
 									<option disabled selected value></option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-									<option>7</option>
-									<option>8</option>
-									<option>9</option>
-									<option>10</option>
+									@for($i=1; $i<11; $i++)
+									<option>{{$i}}</option>
+									@endfor
 								</select>
 							</div>
 						</div>
@@ -118,16 +111,9 @@
 										<label role="pregunta2">2. ¿Qué tan satisfecho está con su Asesor de Servicio?</label>
 										<select onchange="pregunta2()" id="p2" name="p2" class="form-control">
 											<option disabled selected value></option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-											<option>6</option>
-											<option>7</option>
-											<option>8</option>
-											<option>9</option>
-											<option>10</option>
+											@for($i=1; $i<11; $i++)
+											<option>{{$i}}</option>
+											@endfor
 										</select>
 									</div>
 								</div>
@@ -142,16 +128,9 @@
 											<label role="pregunta2a">2a. La cortesía, responsabilidad y honestidad por parte de nuestro asesor de servicio.</label>
 											<select id="p2a" name="p2a" class="form-control">
 												<option disabled selected value></option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-												<option>6</option>
-												<option>7</option>
-												<option>8</option>
-												<option>9</option>
-												<option>10</option>
+												@for($i=1; $i<11; $i++)
+												<option>{{$i}}</option>
+												@endfor
 											</select>
 										</div>
 									</div>
@@ -160,16 +139,9 @@
 											<label role="pregunta2b">2b. Revisión de los componentes del vehículo (por ej. gomas de los limpiaparabrisas, pastillas de frenos, etc.) y explicación de los trabajos a realizar frente al vehículo durante la recepción.</label>
 											<select id="p2b" name="p2b" class="form-control">
 												<option disabled selected value></option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-												<option>6</option>
-												<option>7</option>
-												<option>8</option>
-												<option>9</option>
-												<option>10</option>
+												@for($i=1; $i<11; $i++)
+												<option>{{$i}}</option>
+												@endfor
 											</select>
 										</div>
 									</div>
@@ -178,16 +150,9 @@
 											<label role="pregunta2c">2c. Mantenerlo informado del avance del trabajo de servicio.</label>
 											<select id="p2c" name="p2c" class="form-control">
 												<option disabled selected value></option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-												<option>6</option>
-												<option>7</option>
-												<option>8</option>
-												<option>9</option>
-												<option>10</option>
+												@for($i=1; $i<11; $i++)
+												<option>{{$i}}</option>
+												@endfor
 											</select>
 										</div>
 									</div>
@@ -196,16 +161,9 @@
 											<label role="pregunta2d">2d. La condición del vehículo en la entrega (Por ej. limpio, sin daños, controles y posiciones sin cambios).</label>
 											<select id="p2d" name="p2d" class="form-control">
 												<option disabled selected value></option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-												<option>6</option>
-												<option>7</option>
-												<option>8</option>
-												<option>9</option>
-												<option>10</option>
+												@for($i=1; $i<11; $i++)
+												<option>{{$i}}</option>
+												@endfor
 											</select>
 										</div>
 									</div>
@@ -214,16 +172,9 @@
 											<label role="pregunta2e">2e. La explicación de los trabajos realizados.</label>
 											<select id="p2e" name="p2e" class="form-control">
 												<option disabled selected value></option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-												<option>6</option>
-												<option>7</option>
-												<option>8</option>
-												<option>9</option>
-												<option>10</option>
+												@for($i=1; $i<11; $i++)
+												<option>{{$i}}</option>
+												@endfor
 											</select>
 										</div>
 									</div>
@@ -232,16 +183,9 @@
 											<label role="pregunta2f">2f. Explicación de la factura y lo justo del cobro.</label>
 											<select id="p2f" name="p2f" class="form-control">
 												<option disabled selected value></option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-												<option>6</option>
-												<option>7</option>
-												<option>8</option>
-												<option>9</option>
-												<option>10</option>
+												@for($i=1; $i<11; $i++)
+												<option>{{$i}}</option>
+												@endfor
 											</select>
 										</div>
 									</div>
@@ -354,16 +298,9 @@
 										<label role="pregunta4">4. ¿Qué tan satisfecho está con el tiempo transcurrido para que el servicio fuera completado?</label>
 										<select onchange="pregunta4()" id="p4" name="p4" class="form-control">
 											<option disabled selected value></option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-											<option>6</option>
-											<option>7</option>
-											<option>8</option>
-											<option>9</option>
-											<option>10</option>
+											@for($i=1; $i<11; $i++)
+											<option>{{$i}}</option>
+											@endfor
 										</select>
 									</div>
 								</div>
@@ -378,16 +315,9 @@
 											<label role="pregunta4a">4a. Facilidad y disponibilidad para agendar cita.</label>
 											<select id="p4a" name="p4a" class="form-control">
 												<option disabled selected value></option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-												<option>6</option>
-												<option>7</option>
-												<option>8</option>
-												<option>9</option>
-												<option>10</option>
+												@for($i=1; $i<11; $i++)
+												<option>{{$i}}</option>
+												@endfor
 											</select>
 										</div>
 									</div>
@@ -396,16 +326,9 @@
 											<label role="pregunta4b">4b. Tiempo en la recepción de su vehículo.</label>
 											<select id="p4b" name="p4b" class="form-control">
 												<option disabled selected value></option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-												<option>6</option>
-												<option>7</option>
-												<option>8</option>
-												<option>9</option>
-												<option>10</option>
+												@for($i=1; $i<11; $i++)
+												<option>{{$i}}</option>
+												@endfor
 											</select>
 										</div>
 									</div>
@@ -414,16 +337,9 @@
 											<label role="pregunta4c">4c. Tiempo en la entrega de su vehículo.</label>
 											<select id="p4c" name="p4c" class="form-control">
 												<option disabled selected value></option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-												<option>6</option>
-												<option>7</option>
-												<option>8</option>
-												<option>9</option>
-												<option>10</option>
+												@for($i=1; $i<11; $i++)
+												<option>{{$i}}</option>
+												@endfor
 											</select>
 										</div>
 									</div>
@@ -432,16 +348,9 @@
 											<label role="pregunta4d">4d. Tiempo total requerido para completar el servicio de su vehículo.</label>
 											<select id="p4d" name="p4d" class="form-control">
 												<option disabled selected value></option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-												<option>6</option>
-												<option>7</option>
-												<option>8</option>
-												<option>9</option>
-												<option>10</option>
+												@for($i=1; $i<11; $i++)
+												<option>{{$i}}</option>
+												@endfor
 											</select>
 										</div>
 									</div>
@@ -457,16 +366,9 @@
 										<label role="pregunta5">5. ¿Cuál es su nivel de satisfacción con las instalaciones de la concesionaria y amenidades ofrecidas?</label>
 										<select onchange="pregunta5()" id="p5" name="p5" class="form-control">
 											<option disabled selected value></option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-											<option>6</option>
-											<option>7</option>
-											<option>8</option>
-											<option>9</option>
-											<option>10</option>
+											@for($i=1; $i<11; $i++)
+											<option>{{$i}}</option>
+											@endfor
 										</select>
 									</div>
 								</div>
@@ -481,16 +383,9 @@
 											<label role="pregunta5a">5a. Facilidad para entrar y salir.</label>
 											<select id="p5a" name="p5a" class="form-control">
 												<option disabled selected value></option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-												<option>6</option>
-												<option>7</option>
-												<option>8</option>
-												<option>9</option>
-												<option>10</option>
+												@for($i=1; $i<11; $i++)
+												<option>{{$i}}</option>
+												@endfor
 											</select>
 										</div>
 									</div>
@@ -499,16 +394,9 @@
 											<label role="pregunta5b">5b. Limpieza de la concesionaria.</label>
 											<select id="p5b" name="p5b" class="form-control">
 												<option disabled selected value></option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-												<option>6</option>
-												<option>7</option>
-												<option>8</option>
-												<option>9</option>
-												<option>10</option>
+												@for($i=1; $i<11; $i++)
+												<option>{{$i}}</option>
+												@endfor
 											</select>
 										</div>
 									</div>
@@ -517,16 +405,9 @@
 											<label role="pregunta5c">5c. Comodidad en el área de espera.</label>
 											<select id="p5c" name="p5c" class="form-control">
 												<option disabled selected value></option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-												<option>6</option>
-												<option>7</option>
-												<option>8</option>
-												<option>9</option>
-												<option>10</option>
+												@for($i=1; $i<11; $i++)
+												<option>{{$i}}</option>
+												@endfor
 											</select>
 										</div>
 									</div>
@@ -535,16 +416,9 @@
 											<label role="pregunta5d">5d. Amenidades ofrecidas por la concesionaria (por ej. Bebidas, wifi, snacks, revistas, etc).</label>
 											<select id="p5d" name="p5d" class="form-control">
 												<option disabled selected value></option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-												<option>6</option>
-												<option>7</option>
-												<option>8</option>
-												<option>9</option>
-												<option>10</option>
+												@for($i=1; $i<11; $i++)
+												<option>{{$i}}</option>
+												@endfor
 											</select>
 										</div>
 									</div>
@@ -559,16 +433,9 @@
 									<label role="pregunta6">6. ¿Qué tan satisfecho está con la calidad del auto?</label>
 									<select id="p6" name="p6" class="form-control">
 										<option disabled selected value></option>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
+										@for($i=1; $i<11; $i++)
+										<option>{{$i}}</option>
+										@endfor
 									</select>
 								</div>
 								<div class="form-group">
@@ -585,16 +452,9 @@
 									<label role="pregunta7">7. ¿Qué probabilidad hay de que su próxima reparación o servicio sea en esta misma concesionaria?</label>
 									<select id="p7" name="p7" class="form-control">
 										<option disabled selected value></option>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
+										@for($i=1; $i<11; $i++)
+										<option>{{$i}}</option>
+										@endfor
 									</select>
 								</div>
 							</div><!--well-->
