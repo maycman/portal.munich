@@ -29,3 +29,4 @@ Route::get('/4semanas/agrega/{id}','servicioController@edit');
 Route::post('/4semanas/guarda','servicioController@update');
 Route::get('/4semanas/liberar/{id}','servicioController@destroy');
 Route::post('/4semanas/buscando','servicioController@show');
+Route::get('/4semanas/busqueda','servicioController@result');

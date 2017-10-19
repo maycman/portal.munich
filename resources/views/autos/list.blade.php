@@ -13,7 +13,16 @@
 			<button class="btn btn-block btn-default" data-toggle="modal" data-target="#nuevo">Nuevo registro</button>
 		</div>
 		<div class="col-sm-2">
-			<button class="btn btn-block btn-primary" data-toggle="modal" data-target="#busqueda">Buscar</button>
+			<button id="busqueda" class="btn btn-block btn-primary">Busqueda</button>
+		</div>
+		<div id="formB" class="col-sm-5 hide">
+			{!! Form::open(array('url' => '/4semanas/buscando', 'method' => 'post', 'class'=>'form-inline')) !!}
+				<div class="form-group">
+					<label>Chasis:</label>
+					<input type="text" class="form-control" name="chasis" id="chasis" required>
+				</div>
+				{!! Form::submit('Buscar', ["class" => "btn btn-success"]) !!}
+			{!! Form::close() !!}
 		</div>
 	</div>
 	<div class="row">
@@ -24,7 +33,6 @@
 </div>
 @include("autos.nuevoRegistro")
 @include("autos.confirmar")
-@include("autos.busqueda")
 <div class="container-fluid mgn-top animated bounceInUp">
 	<div class="row">
 		<div class="col-sm-12">

@@ -43,6 +43,12 @@ class servicioController extends Controller
         $fecha_ultimo_servicio = formatDate($request->fecha_ultimo_servicio);
         $fecha_servicio_pendiente = formatDate($request->fecha_servicio_pendiente);
         $fecha_proximo_servicio = formatDate($request->fecha_proximo_servicio);
+        $repetidos = auto::where('chasis',$request->chasis)->first();
+        if ($repetidos->chasis==$request->chasis)
+        {
+            \Alert::message('Error, número de serie duplicado', 'danger');
+            return redirect()->to('4semanas');
+        }
         $row = new auto;
         $row->fecha_llegada = $fecha_llegada;
         $row->chasis = $request->chasis;
@@ -57,18 +63,35 @@ class servicioController extends Controller
         \Alert::message('Nuevo auto cargado', 'info');
         return redirect()->to('4semanas');
     }
-
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $req)
     {
-        //
+        #dd($req);
+        $datos =auto::where('chasis',$req->chasis)->get();
+        $q=null;
+        foreach ($datos as $key)
+        {
+            $q=$key->id_auto;
+        }
+        if ($q<>null or $q<>"")
+        {
+            \Alert::message('Chasis encontrado', 'success');
+        }
+        else
+        {
+            \Alert::message('No encontrado', 'danger');
+        }
+        return view('autos.busqueda',compact('datos'));
     }
-
+    public function result()
+    {
+        return view("autos.busqueda");
+    }
     /**
      * Show the form for editing the specified resource.
      *

@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	classActive();
 	calendarioForms();
+	formBuscar();
 });
 
 
@@ -228,5 +229,21 @@ function modificarFecha(param)
 	/*Y agregamos la funcionalidad de DateTimePicker sin recargar la pagina de nuevo*/
 	$('.age').datetimepicker({
 		format: 'L'
+	});
+}
+function formBuscar()
+{
+	var form = $('#formB');
+	$('#busqueda').click(function(){
+		if (form.attr('class')=='col-sm-5 hide')
+		{
+			form.removeClass();
+			form.addClass('col-sm-5 animated bounceInUp');
+		}
+		else
+		{
+			form.removeClass();
+			form.addClass('col-sm-5 hide');
+		}
 	});
 }
