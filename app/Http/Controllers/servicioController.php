@@ -44,11 +44,16 @@ class servicioController extends Controller
         $fecha_servicio_pendiente = formatDate($request->fecha_servicio_pendiente);
         $fecha_proximo_servicio = formatDate($request->fecha_proximo_servicio);
         $repetidos = auto::where('chasis',$request->chasis)->first();
-        dd($repetidos);
-        if ($repetidos->chasis==$request->chasis)
+        if ($repetidos==null)
         {
-            \Alert::message('Error, número de serie duplicado', 'danger');
-            return redirect()->to('4semanas');
+        }
+        else
+        {
+            if ($repetidos->chasis==$request->chasis)
+            {
+                \Alert::message('Error, número de serie duplicado', 'danger');
+                return redirect()->to('4semanas');
+            }
         }
         $row = new auto;
         $row->fecha_llegada = $fecha_llegada;
